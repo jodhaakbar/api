@@ -1,0 +1,30 @@
+/* Crousel Basic CSS */
+.main-slider-container { position: relative; margin: 0 auto;height:700px;background-color: #d51917; }
+.slider-container { width: 100%; position: absolute; overflow: hidden;z-index: 0; }
+.slider-container ul { position: relative; margin: 0; padding: 0;   }
+.slider-container li { list-style-type: none; position: relative; float: left; }
+.disable-link { pointer-events: none; }
+.prev {  margin-top:200px;left: 10px; background: url(../images/prev.png); z-index:1;}
+.next {  margin-top:200px;right: 10px; background: url(../images/next.png); z-index:1;}
+.disable-link.prev { background: none; }
+.disable-link.next { background: none; }
+.crousel-navigation { position: absolute; top: 110px; width: 50px; height: 50px; }
+
+/*  Some other style to butify content */
+.slider-container h3, .slider-container p { margin-right: 20px; }
+.crousel-image-outer { float: left;width:100%;background:url('../images/bg-pemenang.png');background-size: cover;background-position: center;position: absolute;z-index: 0;background-repeat: no-repeat;position: relative;padding-top:10px;}
+
+.crousel-image-outer-gray h3{
+	font-size: 32px;
+	font-family: 'Raleway', sans-serif;
+	color:#fff;
+}
+
+.crousel-image-outer-gray .red{
+	color:#ab1919;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px
+}
+.carousel-image-outer{
+	background-color: #d51917;
+}

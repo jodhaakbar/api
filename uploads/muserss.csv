@@ -1,0 +1,1 @@
+id;group_id;username;password;email;first_name;last_name;avatar;active;login_attempt;last_login;created_at;updated_at;reminder;activation;remember_token;last_activity;config;sso_uuid;sso_username;sso_email;sso_last_login;sso_date_registered;sso_date_last_updated;sso_birthday;sso_firstname;sso_lastname;sso_gender;sso_phone;sso_province;sso_city;sso_profilepic
