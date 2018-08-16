@@ -1870,6 +1870,17 @@ public static function alphaID($in, $to_num = false, $pad_up = false, $passKey =
 
 	}
 
+	public static function auditSat( $error )
+	{
+		$data = array(
+			'error_message'	=> $error
+
+		);
+
+		\DB::table('tb_logs_sat')->insert($data);
+
+	}
+
 	public static function auditBooking( $id_trx_booking, $request , $response_code , $response )
 	{
 		$data = array(

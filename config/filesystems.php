@@ -45,7 +45,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => storage_path('app/alfa'),
         ],
 
         'public' => [
@@ -61,6 +61,8 @@ return [
             'region' => 'your-region',
             'bucket' => 'your-bucket',
         ],
+
+
 
     ],
 
