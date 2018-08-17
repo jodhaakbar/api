@@ -5,6 +5,23 @@ use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator as Paginator;
 use Validator, Input, Redirect ;
 
+/**
+ * @SWG\Swagger(
+ *     schemes={"http","https"},
+ *     host="localhost:8888/api",
+ *     basePath="/",
+ *     @SWG\Info(
+ *         version="1.0.0",
+ *         title="Show Logs Gojek Booking",
+ *         description="This Api show logs all booking gojek activity",
+ *         termsOfService="",
+ *         @SWG\Contact(
+ *             email="akbar@solusidata.co.id"
+ *         )
+ *         )
+ *     )
+ * )
+ */
 
 class MbookinglogsController extends Controller {
 
@@ -64,6 +81,9 @@ class MbookinglogsController extends Controller {
 		$this->data['id'] = $id;
 		return view($this->module.'.form',$this->data);
 	}
+
+
+
 	function show( Request $request , $id )
 	{
 		/* Handle import , export and view */
@@ -145,6 +165,50 @@ class MbookinglogsController extends Controller {
 
 	}
 
+	/**
+ * @SWG\Get(
+ *      path="/api?module=mtrxbooking",
+ *      operationId="getTrxData",
+ *      tags={"Trx Booking"},
+ *      summary="Get list booking",
+ *      description="Returns list of projects",
+ *			@SWG\Parameter(
+ *				name="page",
+ *				in="query",
+ *				type="number",
+ *				description="Paging Data",
+ *			),
+ *			@SWG\Parameter(
+ *				name="sort",
+ *				in="query",
+ *				type="number",
+ *				description="Sorting Data",
+ *			),
+ *			@SWG\Parameter(
+ *				name="order",
+ *				in="query",
+ *				type="number",
+ *				description="Ordering Data",
+ *			),
+ *			@SWG\Parameter(
+ *				name="limit",
+ *				in="query",
+ *				type="number",
+ *				description="Limit Data",
+ *			),
+ *      @SWG\Response(
+ *          response=200,
+ *          description="successful operation"
+ *       ),
+ *       @SWG\Response(response=400, description="Bad request"),
+ *       security={
+ *           {"api_key_security_example": {}}
+ *       }
+ *     )
+ *
+ * Returns list of projects
+ */
+
 	public function destroy( $request)
 	{
 		// Make Sure users Logged
@@ -169,7 +233,31 @@ class MbookinglogsController extends Controller {
 		}
 
 	}
-
+	/**
+ * @SWG\Get(
+ *      path="/api/{id}?module=mtrxbooking",
+ *      operationId="getBookingId",
+ *      tags={"Trx Booking"},
+ *      summary="Find Booking by id",
+ *      description="Returns list of projects",
+ *			@SWG\Parameter(
+ *				name="id",
+ *				in="path",
+ *				type="number",
+ *				description="ID booking",
+ *			),
+ *      @SWG\Response(
+ *          response=200,
+ *          description="successful operation"
+ *       ),
+ *       @SWG\Response(response=400, description="Bad request"),
+ *       security={
+ *           {"api_key_security_example": {}}
+ *       }
+ *     )
+ *
+ * Returns list of projects
+ */
 	public static function display(  )
 	{
 		$mode  = isset($_GET['view']) ? 'view' : 'default' ;

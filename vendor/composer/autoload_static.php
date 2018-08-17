@@ -20,6 +20,8 @@ class ComposerStaticInit450db7c8f61b1c920e6b6632d188f41b
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         'e8d8290bf1a9fb22ceb9abc966d831ec' => __DIR__ . '/..' . '/mpociot/documentarian/includes/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '0ccdf99b8f62f02c52cba55802e0c2e7' => __DIR__ . '/..' . '/zircote/swagger-php/src/functions.php',
+        'ac0aa5b57142c92aeadc397fa46b9d39' => __DIR__ . '/..' . '/darkaonline/l5-swagger/src/helpers.php',
         'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
         '5e8fe2a5ffaded85af682684fe3bbf5a' => __DIR__ . '/..' . '/mews/captcha/src/helpers.php',
     );
@@ -62,6 +64,7 @@ class ComposerStaticInit450db7c8f61b1c920e6b6632d188f41b
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Swagger\\' => 8,
             'Silly\\' => 6,
         ),
         'R' => 
@@ -87,6 +90,7 @@ class ComposerStaticInit450db7c8f61b1c920e6b6632d188f41b
             'League\\OAuth1\\' => 14,
             'League\\Flysystem\\' => 17,
             'Laravel\\Socialite\\' => 18,
+            'L5Swagger\\' => 10,
         ),
         'I' => 
         array (
@@ -115,6 +119,7 @@ class ComposerStaticInit450db7c8f61b1c920e6b6632d188f41b
             'Dotenv\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Common\\Inflector\\' => 26,
+            'Doctrine\\Common\\Annotations\\' => 28,
             'DeepCopy\\' => 9,
         ),
         'C' => 
@@ -224,6 +229,10 @@ class ComposerStaticInit450db7c8f61b1c920e6b6632d188f41b
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Swagger\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zircote/swagger-php/src',
+        ),
         'Silly\\' => 
         array (
             0 => __DIR__ . '/..' . '/mnapoli/silly/src',
@@ -276,6 +285,10 @@ class ComposerStaticInit450db7c8f61b1c920e6b6632d188f41b
         array (
             0 => __DIR__ . '/..' . '/laravel/socialite/src',
         ),
+        'L5Swagger\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/darkaonline/l5-swagger/src',
+        ),
         'Invoker\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-di/invoker/src',
@@ -327,6 +340,10 @@ class ComposerStaticInit450db7c8f61b1c920e6b6632d188f41b
         'Doctrine\\Common\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
+        ),
+        'Doctrine\\Common\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
         ),
         'DeepCopy\\' => 
         array (

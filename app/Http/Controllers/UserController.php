@@ -1,4 +1,12 @@
-<?php namespace App\Http\Controllers;
+<?php
+
+/**
+ * @license Apache 2.0
+ */
+
+namespace App\Http\Controllers;
+
+
 
 use App\Http\Controllers\Controller;
 use App\User;
@@ -9,6 +17,25 @@ use Illuminate\Pagination\LengthAwarePaginator as Paginator;
 use Validator, Input, Redirect ;
 
 class UserController extends Controller {
+
+	/**
+     * @OA\Post(
+     *     path="/user",
+     *     tags={"user"},
+     *     summary="Create user",
+     *     description="This can only be done by the logged in user.",
+     *     operationId="createUser",
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     ),
+     *     @OA\RequestBody(
+     *         description="Create user object",
+     *         required=true,
+     *         @OA\JsonContent(ref="#/components/schemas/User")
+     *     )
+     * )
+     */
 
 
 	protected $layout = "layouts.main";
@@ -110,6 +137,20 @@ class UserController extends Controller {
 			->withErrors($validator)->withInput();
 		}
 	}
+
+	/**
+     * @OA\Post(
+     *     path="/user/createWithArray",
+     *     tags={"user"},
+     *     summary="Create list of users with given input array",
+     *     operationId="createUsersWithListInput",
+     *     @OA\Response(
+     *         response="default",
+     *         description="successful operation"
+     *     ),
+     *     @OA\RequestBody(ref="#/components/requestBodies/UserArray")
+     * )
+     */
 
 	public function getActivation( Request $request  )
 	{
